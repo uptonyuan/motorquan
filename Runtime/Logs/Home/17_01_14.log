@@ -1,0 +1,558 @@
+[ 2017-01-14T20:03:10+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0569s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0537s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.1513s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0747s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0536s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0534s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0536s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0536s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0549s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0519s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0542s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0517s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0543s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0513s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0559s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0521s ]
+SQL: SELECT * FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0529s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0541s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0525s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0575s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0572s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0526s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.1500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2017-01-14T20:03:20+08:00 ] ::1 /index.php/Home/Index/git
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0542s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0524s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0539s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0523s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0512s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0572s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0545s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0552s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0606s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0537s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0545s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0538s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000420s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000888s ]
+
+[ 2017-01-14T20:03:28+08:00 ] ::1 /index.php/Home/Index/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0564s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0527s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0555s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0555s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0530s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0546s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0554s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0553s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0551s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0536s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0539s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `mt_chat` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `mt_chat` WHERE ( is_delete=0 and is_show=1 ) ORDER BY date desc  [ RunTime:0.0559s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000457s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2017-01-14T20:03:32+08:00 ] ::1 /index.php/Home/Index/category/cid/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0546s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0515s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0541s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0534s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0524s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.1652s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0524s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0549s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0514s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0528s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0511s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0552s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0528s ]
+SQL: SELECT * FROM `mt_category` WHERE `cid` = 28 LIMIT 1   [ RunTime:0.0557s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0545s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `cid` = 28 AND `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0520s ]
+SQL: SELECT * FROM `mt_article` WHERE `cid` = 28 AND `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0572s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0786s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0528s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0777s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0536s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0547s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000387s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2017-01-14T20:03:35+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0669s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0517s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0557s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0558s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0524s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0549s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0549s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0514s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0526s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0522s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0578s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0767s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0532s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0627s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0519s ]
+SQL: SELECT * FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0534s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0539s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0528s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0555s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0529s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.1272s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-01-14T20:03:50+08:00 ] ::1 /index.php/Home/User/oauth_login/type/qq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0541s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0556s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0557s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0528s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0541s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0531s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0539s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0556s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0545s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0525s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0534s ]
+ERR: 请配置您申请的APP_KEY和APP_SECRET
+
+[ 2017-01-14T20:04:00+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0611s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0614s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0556s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0550s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0526s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0544s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0556s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0541s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0559s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0526s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0567s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0534s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0559s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0647s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0505s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0536s ]
+SQL: SELECT * FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0652s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0761s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0545s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0674s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0537s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0598s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000480s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001061s ]
+
+[ 2017-01-14T20:13:34+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0549s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0535s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0550s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0512s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0543s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0546s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0516s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0542s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.1626s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0766s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0528s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0538s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0522s ]
+SQL: SELECT * FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0527s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0553s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0527s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0518s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0556s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0524s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0532s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001083s ]
+
+[ 2017-01-14T20:13:42+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0606s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0532s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0535s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.1568s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0770s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0549s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0619s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0537s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0653s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0642s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0556s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0603s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0549s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0528s ]
+SQL: SELECT * FROM `mt_article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0638s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0543s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0575s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0509s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0963s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0512s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0809s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2017-01-14T20:13:50+08:00 ] ::1 /index.php/Home/Index/article/aid/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0550s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0533s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0550s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0532s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0544s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0559s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0552s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0594s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.1566s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0586s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0542s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0539s ]
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /Applications/MAMP/htdocs/mt.com/Application/Home/Controller/IndexController.class.php 第 77 行.
+SQL: UPDATE `mt_article` SET `click`=click+1 WHERE `aid` = 17 [ RunTime:0.0596s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0621s ]
+NOTIC: [8] Undefined index: title /Applications/MAMP/htdocs/mt.com/Application/Common/Model/ArticleModel.class.php 第 297 行.
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `title` LIKE '%%' AND (  `is_show` = 1 ) AND (  `is_delete` = 0 ) AND `aid` > 17 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `title` LIKE '%%' AND (  `is_show` = 1 ) AND (  `is_delete` = 0 ) AND `aid` < 17 ORDER BY aid desc LIMIT 1   [ RunTime:0.0528s ]
+SQL: SELECT * FROM `mt_article` WHERE `aid` = 17 LIMIT 1   [ RunTime:0.0526s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0641s ]
+SQL: SELECT `tid` FROM `mt_article_tag` WHERE `aid` = 17  [ RunTime:0.1345s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = 17  [ RunTime:0.0537s ]
+SQL: SELECT `cid`,`cid`,`cname`,`keywords` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0557s ]
+SQL: SELECT c.*,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.status = 1 AND c.aid = 17 AND c.pid = 0 AND c.is_delete = 0 ORDER BY date desc  [ RunTime:0.0553s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 135 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8] Undefined variable: user_email /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/d4c1149384e4970b24973a696680cd70.php 第 7 行.
+NOTIC: [8] Undefined variable: user_email /Applications/MAMP/htdocs/mt.com/Runtime/Cache/Home/d4c1149384e4970b24973a696680cd70.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001042s ]
+
+[ 2017-01-14T20:14:09+08:00 ] ::1 /index.php/Home/User/oauth_login/type/qq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0570s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0552s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0550s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0579s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0683s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0541s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0538s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0542s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0537s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0529s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0545s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0538s ]
+ERR: 请配置您申请的APP_KEY和APP_SECRET
+
+[ 2017-01-14T20:14:45+08:00 ] ::1 /index.php/Home/Index/category/cid/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0540s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0744s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0549s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0556s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0556s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0539s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0555s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0522s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0551s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0559s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0534s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0588s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0538s ]
+SQL: SELECT * FROM `mt_category` WHERE `cid` = 28 LIMIT 1   [ RunTime:0.0522s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0501s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article` WHERE `cid` = 28 AND `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0528s ]
+SQL: SELECT * FROM `mt_article` WHERE `cid` = 28 AND `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0536s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0556s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0543s ]
+SQL: SELECT * FROM `mt_article_tag` INNER JOIN mt_tag ON mt_article_tag.tid=mt_tag.tid  WHERE `aid` = '17'  [ RunTime:0.0518s ]
+SQL: SHOW COLUMNS FROM `mt_article_pic` [ RunTime:0.0546s ]
+SQL: SELECT `path` FROM `mt_article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0530s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `mt_category` WHERE `cid` = 28  [ RunTime:0.0525s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000340s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000853s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2017-01-14T20:14:48+08:00 ] ::1 /index.php/Home/Index/chat
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0539s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0545s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0568s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0557s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.1323s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0810s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0559s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0576s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.0593s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0554s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0568s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0557s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0519s ]
+SQL: SHOW COLUMNS FROM `mt_chat` [ RunTime:0.0541s ]
+SQL: SELECT * FROM `mt_chat` WHERE ( is_delete=0 and is_show=1 ) ORDER BY date desc  [ RunTime:0.0541s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-01-14T20:14:52+08:00 ] ::1 /index.php/Home/Index/git
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `mt_article` [ RunTime:0.0536s ]
+SQL: SELECT `aid`,`title` FROM `mt_article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0535s ]
+SQL: SHOW COLUMNS FROM `mt_comment` [ RunTime:0.0551s ]
+SQL: SHOW COLUMNS FROM `mt_oauth_user` [ RunTime:0.0541s ]
+SQL: SELECT `id` FROM `mt_oauth_user` WHERE (  is_admin )  [ RunTime:0.0531s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM mt_comment c INNER JOIN mt_article a ON c.aid=a.aid INNER JOIN mt_oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0551s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Applications/MAMP/htdocs/mt.com/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `mt_category` [ RunTime:0.0542s ]
+SQL: SELECT * FROM `mt_category` ORDER BY sort  [ RunTime:0.0534s ]
+SQL: SHOW COLUMNS FROM `mt_tag` [ RunTime:0.1212s ]
+SQL: SELECT * FROM `mt_tag`  [ RunTime:0.0800s ]
+SQL: SHOW COLUMNS FROM `mt_article_tag` [ RunTime:0.0530s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mt_article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0535s ]
+SQL: SHOW COLUMNS FROM `mt_link` [ RunTime:0.0543s ]
+SQL: SELECT * FROM `mt_link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0537s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000410s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
